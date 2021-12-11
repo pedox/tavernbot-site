@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import React, { useState } from "react";
 import AbyssDemo from "../components/AbyssDemo";
 import AbyssLeaderboardDemo from "../components/AbyssLeaderboardDemo";
@@ -58,7 +59,24 @@ const IndexPage = (props: Props) => {
       <Head>
         <title>The TavernBot - Genshin Impact utility bot for your guild</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+          name="google-site-verification"
+          content="vALsLFEOwX6FtK0O9vFw47D6veks59a1MbElobMWU9s"
+        />
       </Head>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-215068175-1"
+      />
+      <Script>
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-215068175-1');
+          `}
+      </Script>
       <div className="bg-black bg-opacity-75 fixed top-0 left-0 w-full h-full" />
       <div className="lg:w-[1000px] min-h-screen mx-auto flex flex-col relative px-6">
         <div className="flex items-center flex-1 flex-col lg:flex-row">
