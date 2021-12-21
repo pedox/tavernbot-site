@@ -39,7 +39,7 @@ const WishTrackerDemo = ({ onDone }) => {
           )}
           {showIndex === 2 && (
             <p>
-              ⚙️ <em>Processing Chracter Banner</em>
+              ⚙️ <em>Processing Character Banner</em>
             </p>
           )}
           {showIndex === 3 && (
