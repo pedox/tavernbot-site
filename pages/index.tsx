@@ -92,7 +92,7 @@ const IndexPage = (props: Props) => {
             </p>
             <div className="mt-6 flex flex-col lg:flex-row lg:mx-0">
               <a
-                href="https://discord.com/oauth2/authorize?client_id=864896057074515979&permissions=124992&scope=bot"
+                href="https://discord.com/oauth2/authorize?client_id=864896057074515979&permissions=124992&scope=applications.commands%20bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 font-semibold text-white p-2 lg:py-3 lg:px-5 flex items-center rounded-xl mr-4 hover:bg-blue-800 transition-all duration-200 hover:scale-105 w-full mb-4 lg:mb-0"
