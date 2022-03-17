@@ -9,6 +9,7 @@ import CharacterDemo from "../components/CharacterDemo";
 import CharacterExpDemo from "../components/CharacterExpDemo";
 import CharacterTalentDemo from "../components/CharacterTalentDemo";
 import FarmableDemo from "../components/FarmableDemo";
+import Footer from "../components/Footer";
 import ResinDemo from "../components/ResinDemo";
 import TypeWriter from "../components/TypeWriter";
 import WeaponDemo from "../components/WeaponDemo";
@@ -83,7 +84,7 @@ const IndexPage = (props: Props) => {
           <div className="flex-1 text-center lg:text-left mt-20 mb-6 lg:my-0">
             <h1 className="text-3xl lg:text-5xl font-bold text-white">
               The TavernBot{" "}
-              <small className="bg-yellow-600 px-1 rounded-md text-white text-sm lg:text-lg">
+              <small className="bg-orange-500 px-1 rounded-md text-white text-sm lg:text-lg">
                 Beta
               </small>
             </h1>
@@ -197,37 +198,7 @@ const IndexPage = (props: Props) => {
             <span>Join Discord Servers</span>
           </a>
         </div>
-        <div className="text-white text-xs py-3 leading-loose border-t border-white border-opacity-25 mt-5">
-          🇮🇩 TavernBot &copy; 2021 - Data gather from{" "}
-          <a
-            href="https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Genshin Impact fandom wiki
-          </a>
-          ,{" "}
-          <a
-            href="https://genshin.honeyhunterworld.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            Genshin Honneyhunterworld
-          </a>
-          , and{" "}
-          <a
-            href="https://hoyolab.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline"
-          >
-            hoYoLab
-          </a>
-          , this site is not affiliated with miHoYo. All material, images, data
-          related to Genshin Impact Game are trademark of miHoYo itself.
-        </div>
+        <Footer />
       </div>
     </div>
   );
