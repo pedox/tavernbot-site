@@ -27,7 +27,6 @@ const TokenPage = (props: Props) => {
         const decoded = decodeURIComponent(
           escape(window.atob(query.token as string))
         );
-        console.log(decoded);
         return decoded;
       } catch (e) {
         console.error(e);
@@ -36,8 +35,6 @@ const TokenPage = (props: Props) => {
     }
     return "";
   }, [query]);
-
-  console.log("cookie", cookie);
 
   const onSubmit = async (values, { setErrors }) => {
     if (values.cookie === "") {
