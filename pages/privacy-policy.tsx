@@ -58,7 +58,9 @@ const PrivacyPolicyPage = (props: Props) => {
               <strong>Expo</strong>: Token Assignment for mobile devices
             </li>
           </ol>
-          <h1 className="text-xl font-bold mt-3">About Personal Token</h1>
+          <h1 className="text-xl font-bold mt-3">
+            About Personal Token / Registration v2
+          </h1>
           <p>
             We are very concerned about the security aspects of your account. To
             make sure your account is secure and your token is safe, we using{" "}
@@ -76,8 +78,25 @@ const PrivacyPolicyPage = (props: Props) => {
             your game information will remain same.
           </p>
           <p className="mt-3">
+            Purpose of <strong>TavernBot</strong> using your cookie is because
+            hoYoLab is hiding spiral abyss progress for public, because of that
+            we cannot see your spiral abyss team comp and completed avatar
+            lists.
+          </p>
+          <div className="mt-3">
+            By using <strong>TavernBot</strong> registration v2 you're agree to
+            share your cookie with us. Usage of cookie is just for fetched
+            Battle Chronicle Information (Avatar Lists &amp; Spiral Abyss
+            information),{" "}
+            <strong>We will not doing anything outside of that</strong>, the
+            cookie you sent is not including your sensitive information and take
+            over action (like changing password / e-mail) because it has
+            different cookie type. Also using that cookie we not able to see
+            your sensitive information like email, username and password.
+          </div>
+          <p className="mt-3">
             Feel free to revoke your account any time. If you're still concern
-            about your token is beign stored in our servers, you can using{" "}
+            about your cookie is beign stored in our servers, you can using{" "}
             <strong>Ephemeral Token (beta)</strong> method instruction in our
             discord server, <em>still not documented yet.</em>
           </p>
