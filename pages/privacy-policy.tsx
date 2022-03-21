@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React from "react";
 import Layout from "../components/Layout";
 
@@ -6,6 +7,9 @@ type Props = {};
 const PrivacyPolicyPage = (props: Props) => {
   return (
     <Layout>
+      <Head>
+        <title>Privacy Policy</title>
+      </Head>
       <div className="mt-6 text-white leading-relaxed">
         <h1 className="text-3xl font-bold">Privacy Policy</h1>
         <div className="mt-3">
@@ -24,7 +28,7 @@ const PrivacyPolicyPage = (props: Props) => {
           </p>
           <ol className="list-decimal ml-10 mt-3">
             <li>Discord ID / Telegram ID</li>
-            <li>Discord Tag / Telegram Tag</li>
+            <li>Discord Tag / Telegram ID</li>
             <li>Guild ID / Group ID</li>
             <li>*hoYoLab ID (If user register their game id)</li>
             <li>*Genshin Impact UID (If user register their game id)</li>
@@ -108,7 +112,7 @@ const PrivacyPolicyPage = (props: Props) => {
             every time you decide to access our service. (the url is also case
             sensitive).
           </p>
-          <div className="mt-6 text-sm italic">Last Update: 17 March 2022</div>
+          <div className="mt-6 text-sm italic">Last Update: 21 March 2022</div>
         </div>
       </div>
     </Layout>

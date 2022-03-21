@@ -5,6 +5,7 @@ import {
   EyeOffIcon,
 } from "@heroicons/react/solid";
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useMemo, useRef, useState } from "react";
@@ -56,6 +57,9 @@ const TokenPage = (props: Props) => {
   };
   return (
     <Layout>
+      <Head>
+        <title>Encrypted token</title>
+      </Head>
       <div className="text-white mt-10">
         <div className="bg-black border border-white border-opacity-20 rounded-lg p-6 bg-opacity-70">
           <h1 className="text-2xl font-bold">🔏 Encrypted token</h1>

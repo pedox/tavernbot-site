@@ -21,7 +21,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="underline"
         >
-          GenshiniData Repository
+          GenshinData Repository
         </a>
         ,{" "}
         <a
@@ -41,8 +41,8 @@ const Footer = () => {
         >
           hoYoLab
         </a>
-        , this site is not affiliated with miHoYo. All material, images, data
-        related to Genshin Impact Game are trademark of miHoYo itself.
+        , this site is not affiliated with Hoyoverse. All material, images, data
+        related to Genshin Impact Game are trademark of Hoyoverse itself.
       </div>
       <div className="mt-2">
         <Link href="/privacy-policy">
