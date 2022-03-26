@@ -7,7 +7,7 @@ type Props = {};
 const Layout = ({ children }) => {
   return (
     <div
-      className="bg-cover"
+      className="bg-cover bg-center "
       style={{
         backgroundImage: `url(/images/Genshin-Impact-Apple-Cider-Location.webp)`,
       }}
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
           <Link href="/">
             <a>
               <h1 className="text-2xl font-bold text-white">
-                The TavernBot
+                🍻The TavernBot
                 <small className="bg-orange-500 px-1 rounded-md text-white text-xs ml-2">
                   Beta
                 </small>
