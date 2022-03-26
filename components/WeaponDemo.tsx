@@ -11,18 +11,6 @@ const WeaponDemo = ({ onDone }) => {
         appear
         {...transitionProps}
         afterEnter={() => {
-          setTimeout(() => setShowIndex(1), 800);
-        }}
-      >
-        <ChatBubble>
-          <div>!weapon staff homa</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
-        afterEnter={() => {
           setTimeout(() => {
             setShowIndex(-1);
           }, 5000);
@@ -31,7 +19,7 @@ const WeaponDemo = ({ onDone }) => {
           if (typeof onDone !== "undefined") onDone();
         }}
       >
-        <ChatBubble isBot>
+        <ChatBubble isBot command="/weapon">
           <div className="lg:mr-10">
             <img
               src={"/images/demos/weapon.png"}

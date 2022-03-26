@@ -23,10 +23,15 @@ const TokenPage = (props: Props) => {
   const [state, doCopy] = useCopyToClipboard();
 
   const cookie = useMemo(() => {
-    if (query.token) {
+    let hashToken = "";
+    if (typeof window !== "undefined") {
+      const hash = window.location.hash;
+      hashToken = hash.split("#")[1];
+    }
+    if (query.token || hashToken !== "") {
       try {
         const decoded = decodeURIComponent(
-          escape(window.atob(query.token as string))
+          escape(window.atob(hashToken || (query.token as string)))
         );
         return decoded;
       } catch (e) {
@@ -61,7 +66,7 @@ const TokenPage = (props: Props) => {
         <title>Encrypted token</title>
       </Head>
       <div className="text-white mt-10">
-        <div className="bg-black border border-white border-opacity-20 rounded-lg p-6 bg-opacity-70">
+        <div className="bg-black filter backdrop-blur border border-white border-opacity-20 rounded-lg p-6 bg-opacity-70">
           <h1 className="text-2xl font-bold">🔏 Encrypted token</h1>
           <p className="mt-2">
             For security Reason, you will need to encrypt your cookie before
@@ -129,7 +134,7 @@ const TokenPage = (props: Props) => {
                   <div className="mt-4 text-sm">
                     <p className="mb-2">Copy your Encrypted token below</p>
                     <div>
-                      <pre className="w-full overflow-hidden bg-black border border-gray-700 p-2 mb-2">
+                      <pre className="w-full overflow-hidden bg-black border border-gray-700 p-2 mb-2 overflow-x-auto">
                         {token}
                       </pre>
                       <div className="flex items-center">

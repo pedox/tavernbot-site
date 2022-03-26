@@ -28,7 +28,7 @@ const PrivacyPolicyPage = (props: Props) => {
           </p>
           <ol className="list-decimal ml-10 mt-3">
             <li>Discord ID / Telegram ID</li>
-            <li>Discord Tag / Telegram ID</li>
+            <li>Discord Tag / Telegram Username</li>
             <li>Guild ID / Group ID</li>
             <li>*hoYoLab ID (If user register their game id)</li>
             <li>*Genshin Impact UID (If user register their game id)</li>
@@ -112,7 +112,7 @@ const PrivacyPolicyPage = (props: Props) => {
             every time you decide to access our service. (the url is also case
             sensitive).
           </p>
-          <div className="mt-6 text-sm italic">Last Update: 21 March 2022</div>
+          <div className="mt-6 text-sm italic">Last Update: 26 March 2022</div>
         </div>
       </div>
     </Layout>

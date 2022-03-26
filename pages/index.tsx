@@ -16,17 +16,17 @@ import WishTrackerDemo from "../components/WishTrackerDemo";
 interface Props {}
 
 const textChats = [
-  "!info character",
-  "!info kazuha",
-  "!wish https://webstatic--------------",
-  "!exp kazuha 20-80",
-  "!talent kazuha 5-8",
-  "!weapon staff homa",
-  "!abyss",
-  "!abyss summary",
-  "!leaderboard",
-  "!farm",
-  "!resin 99 5:20",
+  { cmd: "/info", param: " character" },
+  { cmd: "/info", param: " kazuha" },
+  { cmd: "/wish", param: " https://webstatic--------------" },
+  { cmd: "/exp", param: " kazuha 20-80" },
+  { cmd: "/talent", param: " kazuha 2-8 2-8 2-10" },
+  { cmd: "/weapon", param: " staff homa" },
+  { cmd: "/abyss", param: "" },
+  { cmd: "/abyss", param: " summary" },
+  { cmd: "/leaderboard", param: "" },
+  { cmd: "/farm", param: "" },
+  { cmd: "/resin", param: " 99 5:20" },
 ];
 
 const descriptions = [
@@ -50,7 +50,7 @@ const IndexPage = (props: Props) => {
 
   return (
     <div
-      className="bg-cover"
+      className="bg-cover bg-center"
       style={{
         backgroundImage: `url(/images/Genshin-Impact-Apple-Cider-Location.webp)`,
       }}
@@ -60,7 +60,7 @@ const IndexPage = (props: Props) => {
         <div className="flex items-center flex-1 flex-col lg:flex-row">
           <div className="flex-1 text-center lg:text-left mt-20 mb-6 lg:my-0">
             <h1 className="text-3xl lg:text-5xl font-bold text-white">
-              The TavernBot{" "}
+              🍻The TavernBot{" "}
               <small className="bg-orange-500 px-1 rounded-md text-white text-sm lg:text-lg">
                 Beta
               </small>
@@ -144,7 +144,8 @@ const IndexPage = (props: Props) => {
                 <div className="mt-6 text-sm bg-gray-700 rounded-lg py-3 px-3 shadow-md">
                   {!disabled && (
                     <TypeWriter
-                      text={textChats[textDisplay]}
+                      command={textChats[textDisplay].cmd}
+                      text={textChats[textDisplay].param}
                       onDone={() => {
                         setChatDisplay(textDisplay);
                       }}

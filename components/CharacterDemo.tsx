@@ -11,18 +11,6 @@ const CharacterDemo = ({ onDone }) => {
         appear
         {...transitionProps}
         afterEnter={() => {
-          setTimeout(() => setShowIndex(1), 800);
-        }}
-      >
-        <ChatBubble>
-          <div>!info character</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
-        afterEnter={() => {
           setTimeout(() => {
             setShowIndex(-1);
           }, 5000);
@@ -31,7 +19,7 @@ const CharacterDemo = ({ onDone }) => {
           if (typeof onDone !== "undefined") onDone();
         }}
       >
-        <ChatBubble isBot>
+        <ChatBubble isBot command="/info">
           <p className="mb-2">Your character lists</p>
           <div className="lg:mr-10">
             <img

@@ -11,18 +11,6 @@ const FarmableDemo = ({ onDone }) => {
         appear
         {...transitionProps}
         afterEnter={() => {
-          setTimeout(() => setShowIndex(1), 800);
-        }}
-      >
-        <ChatBubble>
-          <div>!farm</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
-        afterEnter={() => {
           setTimeout(() => {
             setShowIndex(-1);
           }, 5000);
@@ -31,7 +19,7 @@ const FarmableDemo = ({ onDone }) => {
           if (typeof onDone !== "undefined") onDone();
         }}
       >
-        <ChatBubble isBot>
+        <ChatBubble isBot command="/farm">
           <div className="">
             <img
               src={"/images/demos/farm.jpg"}

@@ -10,44 +10,34 @@ const WishTrackerDemo = ({ onDone }) => {
         show={showIndex > -1}
         appear
         {...transitionProps}
-        afterEnter={() => setTimeout(() => setShowIndex(1), 800)}
-      >
-        <ChatBubble>
-          <div>!wish http://webstatic--------------</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
         afterEnter={async () => {
+          await new Promise((r) => setTimeout(r, 2000));
+          setShowIndex(1);
           await new Promise((r) => setTimeout(r, 2000));
           setShowIndex(2);
           await new Promise((r) => setTimeout(r, 2000));
           setShowIndex(3);
-          await new Promise((r) => setTimeout(r, 2000));
-          setShowIndex(4);
           await new Promise((r) => setTimeout(r, 1000));
-          setShowIndex(5);
+          setShowIndex(4);
         }}
       >
-        <ChatBubble isBot>
-          {showIndex === 1 && (
+        <ChatBubble isBot command="/wish">
+          {showIndex === 0 && (
             <p>
               ⚙️ <em>Processing Standard Banner</em>
             </p>
           )}
-          {showIndex === 2 && (
+          {showIndex === 1 && (
             <p>
               ⚙️ <em>Processing Character Banner</em>
             </p>
           )}
-          {showIndex === 3 && (
+          {showIndex === 2 && (
             <p>
               ⚙️ <em>Processing Weapon Banner</em>
             </p>
           )}
-          {(showIndex >= 4 || showIndex === -1) && (
+          {(showIndex >= 3 || showIndex === -1) && (
             <p>
               ✅ <em>Wish has been collected</em>
             </p>
@@ -55,7 +45,7 @@ const WishTrackerDemo = ({ onDone }) => {
         </ChatBubble>
       </Transition>
       <Transition
-        show={showIndex > 4}
+        show={showIndex > 3}
         appear
         {...transitionProps}
         afterEnter={() => {

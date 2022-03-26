@@ -11,22 +11,10 @@ const ResinDemo = ({ onDone }) => {
         appear
         {...transitionProps}
         afterEnter={() => {
-          setTimeout(() => setShowIndex(1), 800);
-        }}
-      >
-        <ChatBubble>
-          <div>!resin 99 5:20</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
-        afterEnter={() => {
           setTimeout(() => setShowIndex(2), 4000);
         }}
       >
-        <ChatBubble isBot>
+        <ChatBubble isBot command="/resin">
           <div>
             <b>Current Resin: 🌙 99/160</b>
             <p className="font-bold">Replenished in:</p>

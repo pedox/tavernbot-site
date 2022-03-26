@@ -11,18 +11,6 @@ const AbyssLeaderboardDemo = ({ onDone }) => {
         appear
         {...transitionProps}
         afterEnter={() => {
-          setTimeout(() => setShowIndex(1), 800);
-        }}
-      >
-        <ChatBubble>
-          <div>!leaderboard</div>
-        </ChatBubble>
-      </Transition>
-      <Transition
-        show={showIndex > 0}
-        appear
-        {...transitionProps}
-        afterEnter={() => {
           setTimeout(() => {
             setShowIndex(-1);
           }, 5000);
@@ -31,7 +19,7 @@ const AbyssLeaderboardDemo = ({ onDone }) => {
           if (typeof onDone !== "undefined") onDone();
         }}
       >
-        <ChatBubble isBot>
+        <ChatBubble isBot command="/leaderboard">
           <div className="">
             <img
               src={"/images/demos/leaderboard.jpg"}
